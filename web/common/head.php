@@ -8,7 +8,7 @@
         <meta name="description" content="Home page for my site" />
 
         <title>Home</title>
-        <link rel="stylesheet" media="screen" href="/cs313-php/web/css/main.css"/>
+        <link rel="stylesheet" media="screen" href="../css/main.css"/>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <!-- jQuery library -->
