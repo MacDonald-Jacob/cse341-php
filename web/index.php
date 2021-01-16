@@ -2,7 +2,7 @@
 
 switch($action){
   default:
-  include 'web/view/aboutMe.php';
+  include '../web/view/aboutMe.php';
 }
 
 ?>
