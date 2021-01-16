@@ -1,6 +1,6 @@
 <?php $currentPage = 'aboutMe'; ?>
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/cs313-php/web/common/head.php'; ?>
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/cs313-php/web/common/navBar.php'; ?>
+<?php require '../common/head.php'; ?>
+<?php require '../common/navBar.php'; ?>
 <body class="body">
     <main>
         <h1 class="text-center">About Me</h1>
@@ -43,4 +43,4 @@
         </div>
 
     </main>
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/cs313-php/web/common/footer.php'; ?>
+<?php require '../common/footer.php'; ?>
