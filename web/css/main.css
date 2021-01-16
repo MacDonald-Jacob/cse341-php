@@ -1,0 +1,26 @@
+main{
+    margin-left: 10px;
+}
+#meImg{
+    width: 25%;
+}
+.meImg{
+    height: 25px
+}
+#aboutMeP{
+    padding-top: 10px;
+    font-size: large;
+}
+.footer {
+    /* position: fixed; */
+    padding-top: 10px;
+    margin-top: 30px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    border-radius: 4px ;
+    box-shadow: 5px 10px;
+}
