@@ -1,4 +1,4 @@
-<?php $currentPage = 'aboutMe'; ?>
+<?php $currentPage = 'About Me'; ?>
 <?php require '../common/head.php'; ?>
 <?php require '../common/navBar.php'; ?>
 <body class="body">
