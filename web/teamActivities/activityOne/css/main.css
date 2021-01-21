@@ -1,0 +1,17 @@
+#div1{
+    font-size: small;
+    background-color: aqua;
+}
+#div2{
+    font-size: medium;
+    background-color: blue;
+}
+#div3{
+    font-size: large;
+    background-color:darkblue;
+}
+
+.divs:hover{
+    font-weight: bold;
+    background-color: darkgreen;
+}
