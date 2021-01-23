@@ -28,13 +28,13 @@
                     <th scope="row">2</th>
                     <td>2 Scoops</td>
                     <td>$2.00</td>
-                    <td><label><input type='checkbox' name='scoop2' value='2 Scoops' <?php if(isset($_SESSION['cart']['scoop1']) && $_SESSION['cart']['scoop2'] != ""){echo "checked";}?>></label></td>
+                    <td><label><input type='checkbox' name='scoop2' value='2 Scoops' <?php if(isset($_SESSION['cart']['scoop2']) && $_SESSION['cart']['scoop2'] != ""){echo "checked";}?>></label></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>3 Scoops</td>
                     <td>$3.00</td>
-                    <td><label><input type='checkbox' name='scoop3' value='3 Scoops' <?php if(isset($_SESSION['cart']['scoop1']) && $_SESSION['cart']['scoop3'] != ""){echo "checked";}?>></label></td>
+                    <td><label><input type='checkbox' name='scoop3' value='3 Scoops' <?php if(isset($_SESSION['cart']['scoop3']) && $_SESSION['cart']['scoop3'] != ""){echo "checked";}?>></label></td>
                 </tr>
             </tbody>
         </table>
@@ -50,6 +50,7 @@
         //Clear Session variables
         if (isset($_POST["clear"])){
             session_unset();
+            echo "<meta http-equiv='refresh' content='0'>";
         }
         ?>
     </main>

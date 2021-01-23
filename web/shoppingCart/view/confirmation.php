@@ -54,8 +54,16 @@
                 }
                 echo "</div>";
             }
-            echo '<br><br><a href="../view/index.php" class="btn btn-info" role="button">Shop More!</a>';
         ?>
+        <form action="index.php" method="post">
+            <br><br><input type="submit" class="btn btn-info" name="destroyS" value="Shop More!">
+        </form>
+        <?php 
+            if (isset($_POST["destroyS"])){
+                session_destroy();
+                echo "<meta http-equiv='refresh' content='0'>";
+        }?> 
+
     </main>
 </body>
 </html>
