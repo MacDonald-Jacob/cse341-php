@@ -3,7 +3,7 @@
 <?php $currentPage = 'PHP Test'; ?>
 <?php require '../../commonT/head.php'; ?>
 <?php require '../../commonT/navBar.php'; ?>
-  <body>
+  <body class="body">
       <h1>Form</h1>
     <form action="response.php" method="POST">
         <label for="name">Name: </label>

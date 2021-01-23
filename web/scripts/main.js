@@ -4,3 +4,11 @@ function lastUpdated() {
     document.getElementById("stamp").innerHTML = x;
 }
 window.onload = lastUpdated;
+
+
+//Toggle button function
+$(function(){
+    $("#tvButton").click(function(){
+        $("#checker").remove();
+    });
+});

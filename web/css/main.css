@@ -1,6 +1,9 @@
 main{
     margin-left: 10px;
+    margin-right: 10px;
 }
+
+
 #meImg{
     width: 25%;
 }
@@ -10,6 +13,9 @@ main{
 #aboutMeP{
     padding-top: 10px;
     font-size: large;
+}
+#thickLine{
+    border: 1px solid black
 }
 .footer {
     /* position: fixed; */
