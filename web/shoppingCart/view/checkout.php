@@ -83,15 +83,16 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="form-check">
-                    <!-- <button type="submit" name="submit" value="true"></button> -->
-                    <input class="form-check-input" type="submit" id="gridCheck">
+                <div class="form-check" id="cpButton">
+                    <button type="submit" class="form-check-input" name="complete Purchase" id="gridCheck" value="true">Complete Purchase</button>
                     <label class="form-check-label" for="gridCheck">
                     </label>
                 </div>
             </div>
         </form>
-        <hr>
+        <div>
+        <hr><br><br>
+        </div>
         <a href="../view/index.php" class="btn btn-info" role="button">Back to Store</a>
 
     </main>

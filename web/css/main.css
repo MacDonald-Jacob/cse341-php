@@ -17,6 +17,11 @@ main{
 #thickLine{
     border: 1px solid black
 }
+#cpButton{
+    margin-left: 16px;
+    margin-top: 30px;
+}
+
 .footer {
     /* position: fixed; */
     padding-top: 10px;

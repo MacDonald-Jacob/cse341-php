@@ -54,7 +54,7 @@
                 }
                 echo "</div>";
             }
-            echo '<br><br><a href="../view/index.php" class="btn btn-info" role="button">Back to Store</a>';
+            echo '<br><br><a href="../view/index.php" class="btn btn-info" role="button">Shop More!</a>';
         ?>
     </main>
 </body>
