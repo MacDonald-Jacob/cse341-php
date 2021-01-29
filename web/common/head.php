@@ -8,7 +8,6 @@
         <meta name="description" content="<?php echo $currentPage ?> page for my site" />
 
         <title><?php echo $currentPage ?></title>
-        <link rel="stylesheet" media="screen" href="../css/main.css"/>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -17,4 +16,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="../scripts/main.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" media="screen" href="../css/main.css"/>
+
     </head>

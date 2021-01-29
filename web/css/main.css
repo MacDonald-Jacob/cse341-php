@@ -21,6 +21,14 @@ main{
     margin-left: 16px;
     margin-top: 30px;
 }
+.thlist{
+    border: none;
+    text-decoration: underline;
+}
+.hlist{
+    border: none;
+}
+
 
 .footer {
     /* position: fixed; */
