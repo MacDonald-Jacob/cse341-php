@@ -20,7 +20,7 @@
             <li class="list-group-item col-xs-6 hlist"><a href="../teamActivities/activityTwo/view/" class="btn btn-info" role="button">Forms</a></li>
         </ul>
         <ul class="list-group row">
-            <li class="list-group-item col-xs-6 hlist"><a href="#" class="btn btn-info" role="button">Coming Soon!!</a></li>
+            <li class="list-group-item col-xs-6 hlist"><a href="../hannahmacphoto/" class="btn btn-info" role="button">HannahMacPhotography</a></li>
             <li class="list-group-item col-xs-6 hlist"><a href="../../db/teamDb.sql" class="btn btn-info" role="button">Conference Notes SQL</a></li>
         </ul>
 
