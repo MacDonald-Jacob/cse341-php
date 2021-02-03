@@ -1,5 +1,5 @@
 <?php $currentPage = 'Home'; ?>
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/cs313-php/web/hannahmacphoto/commonH/head.php'; ?>
+<?php require '../hannahmacphoto/commonH/head.php'; ?>
 
 <body>
     <header>
