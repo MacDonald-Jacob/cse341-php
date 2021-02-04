@@ -11,6 +11,8 @@
 // $signIn = "<a href='/phpmotors/accounts/index.php?action=login' title='View the PHP Motors sign in page'>My Account</a>";
 // $signOut = "<a href= '/phpmotors/accounts/index.php?action=logout' title='View the PHP Motors logout page'>Log Out</a>";
 
+$packagePage = "<a href='../packages/?action=packages-page' title='View our Packages'>Packages</a>";
+
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 if ($action == NULL){
