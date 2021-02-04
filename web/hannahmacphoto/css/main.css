@@ -1,0 +1,8 @@
+/* Header and Main Navigation */
+header #header{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
