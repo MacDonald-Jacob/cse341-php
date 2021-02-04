@@ -8,7 +8,7 @@
 // Get the database connection file
 // require_once '../library/connections.php';
 
-// $signIn = "<a href='/phpmotors/accounts/index.php?action=login' title='View the PHP Motors sign in page'>My Account</a>";
+$signIn = "<a href='/phpmotors/accounts/index.php?action=login' title='View the PHP Motors sign in page'>My Account</a>";
 // $signOut = "<a href= '/phpmotors/accounts/index.php?action=logout' title='View the PHP Motors logout page'>Log Out</a>";
 
 $packagePage = "<a href='../packages/?action=packages-page' title='View our Packages'>Packages</a>";
