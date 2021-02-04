@@ -1,5 +1,5 @@
 <?php $currentPage = 'Packages'; ?>
-<?php require '../../hannahmacphoto/commonH/head.php'; ?>
+<?php require '../commonH/head.php'; ?>
 
 <body>
     <?php require '../commonH/header.php'; ?>
