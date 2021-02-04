@@ -11,7 +11,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST'))
 ?>
 
 <html>
-<form>
+<form method="POST">
 <input type='text' name='book'>
 <input type='submit' value='submit'>
 </from>
