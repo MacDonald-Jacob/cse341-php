@@ -6,7 +6,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST'))
     print_r($_POST);
     // $rows = $db->query('SELECT * FROM team05.scriptures WHERE book LIKE "%'.$_POST["book"].'%"');
     try {
-    $sql = 'SELECT * FROM team05.scriptures WHERE book LIKE "%:book%"';
+    $sql = 'SELECT * FROM team05.scriptures WHERE book = :book';
 	$stmt = $db->prepare($sql);
 	$stmt->bindValue(':book', $_POST['book'], PDO::PARAM_STR);
 	$stmt->execute();
