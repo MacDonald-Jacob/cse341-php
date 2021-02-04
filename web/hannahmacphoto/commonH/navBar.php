@@ -10,7 +10,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-            <li <?php if ($currentPage === 'home') {echo 'class="active"';} ?>><a href="/cs313-php/web/hannahmacphoto/">Home</a></li>
+            <li <?php if ($currentPage === 'home') {echo 'class="active"';} ?>><a href="/hannahmacphoto/">Home</a></li>
             <li <?php if ($currentPage === 'packages') {echo 'class="active"';}?>><?php echo $packagePage?></li>
         </ul>
         <!-- <ul class="nav navbar-nav navbar-right">
