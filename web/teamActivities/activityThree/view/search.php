@@ -14,7 +14,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST'))
 	$stmt->closeCursor();
 
     foreach ($rows as $row){
-        echo "<div><a href=\"/scriptureDetails.php?id=" . $row["id"] . "\"><b>" . $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . "</b></a></div>";
+        echo "<div><a href=\"scriptureDetails.php?id=" . $row["id"] . "\"><b>" . $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . "</b></a></div>";
     }
 } catch (PDOException $e) {echo $e;}
 }
