@@ -3,6 +3,7 @@
 require_once '../library/connections.php';
 if (($_SERVER['REQUEST_METHOD'] == 'POST'))
 {
+    print_r($_POST);
     // $rows = $db->query('SELECT * FROM team05.scriptures WHERE book LIKE "%'.$_POST["book"].'%"');
     $sql = 'SELECT * FROM team05.scriptures WHERE book LIKE "%:book%"';
 	$stmt = $db->prepare($sql);
