@@ -9,8 +9,8 @@ session_start();
 // require_once 'library/connections.php';
 
 //Build links
-$signIn = "<a href='/hannahmacphoto/accounts/index.php?action=login' title='View the PHP Motors sign in page'>My Account</a>";
-$signOut = "<a href= '/hannahmacphoto/accounts/index.php?action=logout' title='View the PHP Motors logout page'>Log Out</a>";
+$signIn = "<a href='/hannahmacphoto/accounts/?action=login' title='View the PHP Motors sign in page'>My Account</a>";
+// $signOut = "<a href= '/hannahmacphoto/accounts/?action=logout' title='View the PHP Motors logout page'>Log Out</a>";
 $packagePage = "<a href='../hannahmacphoto/packages/?action=packages-page' title='View our Packages'>Packages</a>";
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
