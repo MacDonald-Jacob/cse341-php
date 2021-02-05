@@ -21,7 +21,7 @@ function buildPackagesDisplay($packages){
         $currency = number_format("$package[packagePrice]");
         $dv .= '<li>';
         $dv .= "<div id='packageImg'>";
-        $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
+        // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
         $dv .= "<img src='$package[packageImg]' alt='Image of $package[packageName] on hannahmacphotography.com'>";
         $dv .= "</div>";
         $dv .= '<hr id="packageID">';
