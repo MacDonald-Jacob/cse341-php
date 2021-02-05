@@ -10,7 +10,7 @@ require_once '../library/connections.php';
 // Get the accounts-model
 require_once '../models/accounts-model.php';
 // Get the functions.php
-require_once '../Library/functions.php';
+require_once '../library/functions.php';
 
 // Build a link 
 $signIn = "<a href='../accounts/?action=login' title='View the Admin sign in page'>Admin Login</a>";
