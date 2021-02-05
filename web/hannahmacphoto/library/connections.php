@@ -1,5 +1,4 @@
 <?php
-function hannahmacphotoConnect(){
     try {
         // default Heroku Postgres configuration URL
         // this is a built in function in php to get the value from an enviornment variable
@@ -49,5 +48,5 @@ function hannahmacphotoConnect(){
     }
 
     return $db;
-}
+
 ?>
