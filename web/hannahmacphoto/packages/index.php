@@ -7,6 +7,8 @@ session_start();
 
 // Get the database connection file
 require_once '../library/connections.php';
+// Get the vehicle model.
+require_once '../models/package-model.php';
 
 //Build links
 $signIn = "<a href='../accounts/?action=login' title='View the Admin sign in page'>Admin Login</a>";
@@ -25,6 +27,9 @@ switch ($action) {
         include '../view/package-management.php';
     break;
     default:
+    $db = hannahmacphotoConnect();
+    $packages = getPackagesByPackageID($db);
+    $packageDisplay = buildPackagesDisplay($packages);
         include '../view/packages-page.php';
 }
 ?>

@@ -6,6 +6,13 @@
         <?php require '../commonH/navBar.php'; ?>
         <main>
             <h1>Packages</h1>
+            <?php if(isset($message)){
+                echo $message; }
+            ?>
+            <?php           
+            if(isset($packageDisplay)){
+                echo $packageDisplay;
+            } ?>
         </main>
         <?php require '../commonH/footer.php'; ?>
     </body>
