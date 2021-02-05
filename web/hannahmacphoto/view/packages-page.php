@@ -8,6 +8,7 @@
             <h1>Packages</h1>
             <?php
                 $packages = $db -> query('SELECT p.* , m.service FROM hmphoto.packages AS p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID');
+                var_dump($packages);
                 $dv = '<ul id="package-display">';
                 foreach ($packages as $package) {
                     $currency = number_format("$package[packagePrice]");
