@@ -18,9 +18,16 @@
             <!-- method and post in the form tag makes sure the login view is sending the login info to the "accounts" controller.   -->
             <!-- Since index.php is a default name on the server, if we don't specify a file name the server will look for a default name and direct inputs to it. -->
             <form id="signIn" method="post" action="/hannahmacphoto/accounts/">
-                <label for="password">Password</label><br>
+            <label for="userName">User Name</label> 
+                <input type="text" id="userName" name="userName" 
+                <?php 
+                if(isset($userName)){
+                    echo "value='$userName'";
+                }  
+                ?> required>   
+            <br><label for="password">Password</label>
                 <input type="password" id="password" name="clientPassword" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-                <input type="submit" value="Sign-in">
+                <br><input type="submit" value="Sign-in">
                 <input type="hidden" name="action" value="Login">
             </form>
         </main>
