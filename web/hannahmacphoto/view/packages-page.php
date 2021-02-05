@@ -11,7 +11,7 @@
                 var_dump($packages);
                 $dv = '<ul id="package-display">';
                 foreach ($packages as $package) {
-                    $currency = number_format("$package[packagePrice]");
+                    $currency = number_format($package['packagePrice']);
                     $dv .= '<li>';
                     $dv .= "<div id='packageImg'>";
                     // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
