@@ -34,7 +34,8 @@ switch ($action) {
         $userPassword = filter_input(INPUT_POST, 'userPassword', FILTER_SANITIZE_STRING);
         // $userName = checkUserName($userName);
  
-        
+        $hashedPassword = password_hash($userPassword, PASSWORD_DEFAULT);
+
         // Check if variables are empty. If they are send a message and call the view using a php include function so the error message is displayed in the view.
         if(empty($userName) || empty($userPassword)){
             $message = '<p class="notice">Please provide information for all empty form fields.</p>';
@@ -45,7 +46,9 @@ switch ($action) {
         // A valid password exists, proceed with the login process
         // Query the client data based on userID
         $userData = getUser($userName);
-        
+
+        $hashedPassword = password_hash($userPassword, PASSWORD_DEFAULT);
+
         // Compare the password just submitted against
         // the hashed password for the matching client
         $hashCheck = password_verify($userPassword, $userData['userPassword']);
@@ -53,7 +56,7 @@ switch ($action) {
         // If the hashes don't match create an error
         // and return to the login view
         if(!$hashCheck) {
-            $message = '<p class="notice">Please check your password and try again.</p>';
+            $message = '<p class="notice">Please check your password and try again. </p>';
             include '../view/login.php';
         exit;
         }

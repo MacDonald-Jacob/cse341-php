@@ -24,7 +24,7 @@
                 if(isset($userName)){
                     echo "value='$userName'";
                 }  
-                ?> required>   
+                ?> >   
             <br><label for="password">Password</label>
                 <input type="password" id="userPassword" name="userPassword" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
                 <br><input type="submit" value="Sign-in">
