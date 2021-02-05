@@ -7,15 +7,14 @@
         <main>
             <h1>Packages</h1>
             <?php
-                $packages = $db -> query('SELECT p.* , m.service FROM hmphoto.packages AS p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID');
-                var_dump($packages);
+                $packages = $db->query('SELECT p.packageName, p.packageImg, p.packagePrice, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID');                var_dump($packages);
                 $dv = '<ul id="package-display">';
                 foreach ($packages as $package) {
                     $currency = number_format($package['packagePrice']);
                     $dv .= '<li>';
                     $dv .= "<div id='packageImg'>";
                     // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
-                    $dv .= "<img src='$package[packageImg]' alt='Image of $package[packageName] on hannahmacphotography.com'>";
+                    $dv .= "<img src='$package[packageImg]' alt='Image of $package[packageName] hannahmacphotography.com'>";
                     $dv .= "</div>";
                     $dv .= '<hr id="packageID">';
                     $dv .= "<h2>$package[packageName]</h2>";
