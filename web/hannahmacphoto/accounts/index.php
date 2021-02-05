@@ -9,6 +9,8 @@ session_start();
 require_once '../library/connections.php';
 // Get the accounts-model
 require_once '../models/accounts-model.php';
+// Get the functions.php
+require_once '../Library/functions.php';
 
 // Build a link 
 $signIn = "<a href='../accounts/?action=login' title='View the Admin sign in page'>Admin Login</a>";
@@ -30,7 +32,9 @@ switch ($action) {
         // Filter and store the data inputs into variables and validate variable using custom functions from functions.php file.
         $userName = filter_input(INPUT_POST, 'userName', FILTER_SANITIZE_STRING);
         $userPassword = filter_input(INPUT_POST, 'userPassword', FILTER_SANITIZE_STRING);
-            
+        // $userName = checkUserName($userName);
+ 
+        
         // Check if variables are empty. If they are send a message and call the view using a php include function so the error message is displayed in the view.
         if(empty($userName) || empty($userPassword)){
             $message = '<p class="notice">Please provide information for all empty form fields.</p>';
@@ -50,7 +54,7 @@ switch ($action) {
         // and return to the login view
         if(!$hashCheck) {
             $message = '<p class="notice">Please check your password and try again.</p>';
-            include '../hannahmacphoto/view/login.php';
+            include '../view/login.php';
         exit;
         }
         
@@ -66,7 +70,7 @@ switch ($action) {
         $_SESSION['userData'] = $userData;
         
         // Send them to the admin view
-        include '../hannahmacphoto/view/package-management.php';
+        include '../view/package-management.php';
         exit;
     break;
     case 'login':
