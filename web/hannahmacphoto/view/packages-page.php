@@ -6,13 +6,26 @@
         <?php require '../commonH/navBar.php'; ?>
         <main>
             <h1>Packages</h1>
-            <?php if(isset($message)){
-                echo $message; }
+            <?php
+                $packages = $db -> query('SELECT p.* , m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID');
+                $dv = '<ul id="package-display">';
+                foreach ($packages as $package) {
+                    $currency = number_format("$package[packagePrice]");
+                    $dv .= '<li>';
+                    $dv .= "<div id='packageImg'>";
+                    // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
+                    $dv .= "<img src='$package[packageImg]' alt='Image of $package[packageName] on hannahmacphotography.com'>";
+                    $dv .= "</div>";
+                    $dv .= '<hr id="packageID">';
+                    $dv .= "<h2>$package[packageName]</h2>";
+                    $dv .= "</a>";
+                    $dv .= "<span class='formatCurrency'>$currency</span>";
+                    $dv .= '</li>';
+                }
+                    $dv .= '</ul>';
+
+                    echo $dv;
             ?>
-            <?php           
-            if(isset($packageDisplay)){
-                echo $packageDisplay;
-            } ?>
         </main>
         <?php require '../commonH/footer.php'; ?>
     </body>

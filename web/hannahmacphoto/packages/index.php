@@ -27,9 +27,9 @@ switch ($action) {
         include '../view/package-management.php';
     break;
     default:
-    $db = hannahmacphotoConnect();
-    $packages = getPackagesByPackageID($db);
-    $packageDisplay = buildPackagesDisplay($packages);
+    // $db = hannahmacphotoConnect();
+    // $packages = getPackagesByPackageID($db);
+    // $packageDisplay = buildPackagesDisplay($packages);
         include '../view/packages-page.php';
 }
 ?>

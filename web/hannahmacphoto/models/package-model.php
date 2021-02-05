@@ -10,10 +10,10 @@
 //     return $vehicles;
 //    }
 
-function getPackagesByPackageID($db){
-    $packages = $db -> query('SELECT p.* , m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID');
-return $packages;   
-}
+// function getPackagesByPackageID($db){
+//     $packages = $db -> query('SELECT p.* , m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID');
+// return $packages;   
+// }
 
 
 
