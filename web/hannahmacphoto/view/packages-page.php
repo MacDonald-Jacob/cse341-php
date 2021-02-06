@@ -65,25 +65,26 @@
 
 
                     // $dv1 = '<ul id="package-display">';
+                    $dv1 = '<div class="container">';
+                    $dv1 .= '<div class="row">';
                     foreach ($packages1 as $package1) {
-                        $dv1 = '<div class="container">';
-                            $dv1 .= '<div class="row">';
-                                $dv1 .= '<div class="col-sm-3">';
-                                    $currency = number_format($package1['packageprice']);
-                                    // $dv1 .= '<li>';
-                                    $dv1 .= "<div id='packageImg'>";
-                                    // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
-                                    $dv1 .= "<img class='img-responsive' src='$package1[packageimg]' alt='Image of" . $package1['packagename'] . "on hannahmacphotography.com' id='packageImg'>";
-                                    $dv1 .= "</div>";
-                                    $dv1 .= '<hr id="packageID">';
-                                    $dv1 .= "<h2>$package1[packagename]</h2>";
-                                    // $dv1 .= "</a>";
-                                    $dv1 .= "<span class='formatCurrency'>$currency</span>";
-                                    // $dv1 .= '</li>';
-                                $dv1 .= '</div>';
-                            $dv1 .= '</div>';
+                        $dv1 .= '<div class="col-sm-3">';
+                            $currency = number_format($package1['packageprice']);
+                            // $dv1 .= '<li>';
+                            $dv1 .= "<div id='packageImg'>";
+                            // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
+                            $dv1 .= "<img class='img-responsive' src='$package1[packageimg]' alt='Image of" . $package1['packagename'] . "on hannahmacphotography.com' id='packageImg'>";
+                            $dv1 .= "</div>";
+                            $dv1 .= '<hr id="packageID">';
+                            $dv1 .= "<h2>$package1[packagename]</h2>";
+                            // $dv1 .= "</a>";
+                            $dv1 .= "<span class='formatCurrency'>$currency</span>";
+                            // $dv1 .= '</li>';
                         $dv1 .= '</div>';
+
                     }
+                    $dv1 .= '</div>';
+                    $dv1 .= '</div>';
                     // $dv1 .= '</ul>';
 
                     echo $dv1;
