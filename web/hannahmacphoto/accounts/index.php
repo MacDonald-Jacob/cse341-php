@@ -79,6 +79,15 @@ switch ($action) {
     case 'login':
         include '../view/login.php';
     break;
+    
+    //delivers the login view
+    case 'logout':
+        //Destroy session
+        session_destroy();
+        //send home
+        include '../view/login.php'; 
+    break;
+    
     default:
         include '../view/login.php';
 }
