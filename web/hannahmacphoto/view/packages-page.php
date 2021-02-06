@@ -14,7 +14,7 @@
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                 {
                     echo "<div><b>" . $row['packagename'] . " " . $row['packageimg'] . ":" . $row['packageprice'] . "</b> - \"" . $row['service'] . "\"</div>";
-                    echo " <img src='$row[packageimg]'>"
+                    echo " <img src='$row[packageimg]'>";
                 }
 
 
