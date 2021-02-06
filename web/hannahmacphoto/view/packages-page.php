@@ -24,7 +24,7 @@
                 foreach ($packages as $package) {
                     $currency = number_format($package['packageprice']);
                     $dv .= '<li>';
-                    $dv .= "<div id='packageimg'>";
+                    $dv .= "<div id='packageImg'>";
                     // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
                     $dv .= "<img src='$package[packageimg]' alt='Image of" . $package['packagename'] . "on hannahmacphotography.com'>";
                     $dv .= "</div>";
