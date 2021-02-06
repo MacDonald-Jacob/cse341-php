@@ -30,7 +30,8 @@ header #header{
 #packageImg {
     display: block;
     margin-left: auto;
-    margin-right: auto ;
+    margin-right: auto;
+    margin-top: 5px;
     max-width: 200px;
 }
 
