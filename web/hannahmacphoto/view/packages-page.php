@@ -44,7 +44,7 @@
 
 
 
-                    $packages = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID WHERE p.mediaid = 1 ORDER BY p.packageid'); 
+                    $packages1 = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID WHERE p.mediaid = 1 ORDER BY p.packageid'); 
                     // $dv1 = '<ul id="package-display">';
                     // foreach ($packages as $package) {
                     //     $currency = number_format($package['packageprice']);
@@ -65,7 +65,7 @@
 
 
                     // $dv1 = '<ul id="package-display">';
-                    foreach ($packages as $package) {
+                    foreach ($packages1 as $package) {
                         $dv1 = '<div class="container">';
                             $dv1 .= '<div class="row">';
                                 $dv1 .= '<div class="col-sm-3">';
