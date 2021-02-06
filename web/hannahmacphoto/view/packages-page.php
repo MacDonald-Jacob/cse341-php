@@ -6,13 +6,15 @@
         <?php require '../commonH/navBar.php'; ?>
         <main>
             <h1>Packages</h1>
-            <?php
+<img src="" alt="">
+                <?php
                 $statement = $db->prepare('SELECT p.packageName, p.packageImg, p.packagePrice, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID');
                 $statement->execute();
                 //Go through each result
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                 {
                     echo "<div><b>" . $row['packagename'] . " " . $row['packageimg'] . ":" . $row['packageprice'] . "</b> - \"" . $row['service'] . "\"</div>";
+                    echo " <img src='$row[packageimg]'>"
                 }
 
 
