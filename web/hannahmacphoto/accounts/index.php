@@ -86,7 +86,11 @@ switch ($action) {
         session_destroy();
         //send home
         include '../view/login.php';
-        echo "<meta http-equiv='refresh' content='0'>"; 
+        $count = 1;
+        while($i < 2){
+            echo "<meta http-equiv='refresh' content='0'>"; 
+            $i++;
+        }
     break;
     
     default:
