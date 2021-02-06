@@ -9,7 +9,7 @@
             <?php
                 $statement = $db->prepare('SELECT p.packageName, p.packageImg, p.packagePrice, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID');
                 $statement->execute();
-
+                echo $statement;
                 //Go through each result
                 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
                 {
