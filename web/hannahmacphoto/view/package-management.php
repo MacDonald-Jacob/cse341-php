@@ -4,14 +4,14 @@
         header('Location: /hannahmacphoto/index.php');
     }
 ?><?php $currentPage = 'Package Management'; ?>
-    <?php require '../hannahmacphoto/commonH/head.php'; ?>
+    <?php require '../commonH/head.php'; ?>
 
     <body>
-        <?php require '../hannahmacphoto/commonH/header.php'; ?>
-        <?php require '../hannahmacphoto/commonH/navBar.php'; ?>
+        <?php require '../commonH/header.php'; ?>
+        <?php require '../commonH/navBar.php'; ?>
         <main>
             <h1>Package Management</h1>
         </main>
-        <?php require '../hannahmacphoto/commonH/footer.php'; ?>
+        <?php require '../commonH/footer.php'; ?>
     </body>
 </html>
