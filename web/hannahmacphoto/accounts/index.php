@@ -84,13 +84,14 @@ switch ($action) {
     case 'logout':
         //Destroy session
         session_destroy();
-        //send home
-        include '../view/login.php';
         $count = 1;
         while($i < 2){
             echo "<meta http-equiv='refresh' content='0'>"; 
             $i++;
         }
+        //send home
+        include '../view/login.php';
+
     break;
     
     default:
