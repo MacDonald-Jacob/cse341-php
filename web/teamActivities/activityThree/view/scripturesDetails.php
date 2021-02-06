@@ -6,4 +6,5 @@ foreach ($rows as $row){
     echo "<div><b>" . $row['book'] . " " . $row['chapter'] . ":" . $row['verse'] . "</b> - \"" . $row['content'] . "\"</div>";
 }
 
+
 ?>
