@@ -26,7 +26,7 @@
                     $dv .= '<li>';
                     $dv .= "<div id='packageImg'>";
                     // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
-                    $dv .= "<img src='$package[packageimg]' alt='Image of" . $package['packagename'] . "on hannahmacphotography.com'>";
+                    $dv .= "<img src='$package[packageimg]' alt='Image of" . $package['packagename'] . "on hannahmacphotography.com' id='packageImg'>";
                     $dv .= "</div>";
                     $dv .= '<hr id="packageID">';
                     $dv .= "<h2>$package[packagename]</h2>";
