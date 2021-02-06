@@ -85,7 +85,8 @@ switch ($action) {
         //Destroy session
         session_destroy();
         //send home
-        include '../view/login.php'; 
+        include '../view/login.php';
+        echo "<meta http-equiv='refresh' content='0'>"; 
     break;
     
     default:
