@@ -64,13 +64,13 @@
                     //     echo $dv;
 
 
-                    $dv1 = '<ul id="package-display">';
+                    // $dv1 = '<ul id="package-display">';
                     foreach ($packages as $package) {
                         $dv1 = '<div class="container">';
                             $dv1 .= '<div class="row">';
                                 $dv1 .= '<div class="col-sm-3">';
                                     $currency = number_format($package['packageprice']);
-                                    $dv1 .= '<li>';
+                                    // $dv1 .= '<li>';
                                     $dv1 .= "<div id='packageImg'>";
                                     // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
                                     $dv1 .= "<img class='img-responsive' src='$package[packageimg]' alt='Image of" . $package['packagename'] . "on hannahmacphotography.com' id='packageImg'>";
@@ -79,12 +79,12 @@
                                     $dv1 .= "<h2>$package[packagename]</h2>";
                                     // $dv1 .= "</a>";
                                     $dv1 .= "<span class='formatCurrency'>$currency</span>";
-                                    $dv1 .= '</li>';
+                                    // $dv1 .= '</li>';
                                 $dv1 .= '</div>';
                             $dv1 .= '</div>';
                         $dv1 .= '</div>';
                     }
-                    $dv1 .= '</ul>';
+                    // $dv1 .= '</ul>';
 
                     echo $dv1;
 
