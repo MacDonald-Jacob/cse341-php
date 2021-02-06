@@ -24,7 +24,7 @@
             <li class="list-group-item col-xs-6 hlist"><a href="../../db/teamDb.sql" class="btn btn-info" role="button">Conference Notes SQL</a></li>
         </ul>
         <ul class="list-group row">
-            <li class="list-group-item col-xs-6 hlist"><a href="#" class="btn btn-info" role="button"></a></li>
+            <li class="list-group-item col-xs-6 hlist"></li>
             <li class="list-group-item col-xs-6 hlist"><a href="../teamActivities/activityThree/view/search.php" class="btn btn-info" role="button">Database Display</a></li>
         </ul>
 
