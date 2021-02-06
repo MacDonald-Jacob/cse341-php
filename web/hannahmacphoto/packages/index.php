@@ -13,6 +13,7 @@ require_once '../models/package-model.php';
 //Build links
 $signIn = "<a href='../accounts/?action=login' title='View the Admin sign in page'>Admin Login</a>";
 $signOut = "<a href= '../accounts/?action=logout' title='Log out'>Log Out</a>";
+$addVehicle = "<a href='../packages/?action=add-package' title='View the add package page'>Add Package</a>";
 
 $packagePage = "<a href='../packages/?action=packages-page' title='View our Packages'>Packages</a>";
 
@@ -23,13 +24,13 @@ if ($action == NULL){
 
 //Key Value Pair
 switch ($action) {
+    case 'add-package':
+        include '../view/add-package.php';
+    break;
     case 'packageManagement':
         include '../view/package-management.php';
     break;
     default:
-    // $db = hannahmacphotoConnect();
-    // $packages = getPackagesByPackageID($db);
-    // $packageDisplay = buildPackagesDisplay($packages);
         include '../view/packages-page.php';
 }
 ?>
