@@ -46,3 +46,9 @@ INSERT INTO hmphoto.packages (mediaID, packageName, packagePrice, packageHours, 
 (3, 'Bronze Photo and Video', 350, '0-1', '/images/noImage.png', 1, 'This package is perfect for quick family, bridals, engagement and senior photo and video sessions.'),
 (3, 'Silver Photo and Video', 900, '2-3', '/images/noImage.png', 2, 'This package is good for famiy, bridals, engagement and senior pictures where you want more locations and have to switch outfits. This would also be good for a quick temple or cerimony. '),
 (3, 'Gold Photo and Video', 1700, '4-6', '/images/noImage.png', 3, 'This package is good for full day weddings and receptions.'); 
+
+
+
+
+-- update
+UPDATE hmphoto.packages SET packageImg = '/hannahmacphoto/imagesH/small/bridal.jpg' WHERE packageID = 1;
