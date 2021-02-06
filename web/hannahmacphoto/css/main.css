@@ -28,7 +28,7 @@ header #header{
        color: black;
    }
 #packageImg {
-    max-width: 100%;
-    height: 150px ;
+    max-width: 200px;
+    /* height: 150px ; */
 }
 .formatCurrency::before{content: "$";}
