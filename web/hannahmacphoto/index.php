@@ -9,7 +9,7 @@ session_start();
 require_once 'library/connections.php';
 
 //Build links
-$signIn = "<a href='../hannahmacphoto/accounts/?action=login' title='View the Admin sign in page'>Admin Login1</a>";
+$signIn = "<a href='../hannahmacphoto/accounts/?action=login' title='View the Admin sign in page'>Admin Login</a>";
 $signOut = "<a href= '../hannahmacphoto/accounts/?action=logout' title='Log out'>Log Out1</a>";
 $packagePage = "<a href='../hannahmacphoto/packages/?action=packages-page' title='View our Packages'>Packages</a>";
 
