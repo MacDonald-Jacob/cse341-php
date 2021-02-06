@@ -68,7 +68,7 @@
                     $dv1 = '<div class="container">';
                     $dv1 .= '<div class="row">';
                     foreach ($packages1 as $package1) {
-                        $dv1 .= '<div class="col-sm-3">';
+                        $dv1 .= '<div class="col-sm-3 indPackage">';
                             $currency = number_format($package1['packageprice']);
                             // $dv1 .= '<li>';
                             $dv1 .= "<div id='packageImg'>";
@@ -85,7 +85,6 @@
                     }
                     $dv1 .= '</div>';
                     $dv1 .= '</div>';
-                    // $dv1 .= '</ul>';
 
                     echo $dv1;
 
