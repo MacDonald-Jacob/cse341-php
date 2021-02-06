@@ -12,6 +12,7 @@
         <main>
             <h1>Package Management</h1>
             <?php
+                echo $addPackage;
                 $packages = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID ORDER BY p.packageid'); 
                 echo "<h2>Packages</h2>";
                 foreach ($packages as $package) {

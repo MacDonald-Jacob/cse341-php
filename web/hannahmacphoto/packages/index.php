@@ -13,7 +13,7 @@ require_once '../models/package-model.php';
 //Build links
 $signIn = "<a href='../accounts/?action=login' title='View the Admin sign in page'>Admin Login</a>";
 $signOut = "<a href= '../accounts/?action=logout' title='Log out'>Log Out</a>";
-$addVehicle = "<a href='../packages/?action=add-package' title='View the add package page'>Add Package</a>";
+$addPackage = "<a href='../packages/?action=add-package' title='View the add package page'>Add Package</a>";
 
 $packagePage = "<a href='../packages/?action=packages-page' title='View our Packages'>Packages</a>";
 
