@@ -11,8 +11,9 @@
         <?php require '../commonH/navBar.php'; ?>
         <main>
             <h1>Package Management</h1>
+            <a href= '../packages/?action=add-package' title='View the add package page'>Add Package</a>
+
             <?php
-                echo $addPackage;
                 echo "$addPackage";
                 $packages = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID ORDER BY p.packageid'); 
                 echo "<h2>Packages</h2>";
