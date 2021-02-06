@@ -7,70 +7,13 @@
         <main>
             <h1>Packages</h1>
                 <?php
-                // $statement = $db->prepare('SELECT p.packageName, p.packageImg, p.packagePrice, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID');
-                // $statement->execute();
-                // //Go through each result
-                // while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-                // {
-                //     echo "<div><b>" . $row['packagename'] . " " . $row['packageimg'] . ":" . $row['packageprice'] . "</b> - \"" . $row['service'] . "\"</div>";
-                //     echo " <img src='$row[packageimg]'>";
-                // }
-
-
-
-                // $packages = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID ORDER BY p.mediaid, p.packageid'); 
-                // $dv = '<ul id="package-display">';
-                // foreach ($packages as $package) {
-                //     $currency = number_format($package['packageprice']);
-                //     $dv .= '<li>';
-                //     $dv .= "<div id='packageImg'>";
-                //     // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
-                //     $dv .= "<img src='$package[packageimg]' alt='Image of" . $package['packagename'] . "on hannahmacphotography.com' id='packageImg'>";
-                //     $dv .= "</div>";
-                //     $dv .= '<hr id="packageID">';
-                //     $dv .= "<h2>$package[packagename]</h2>";
-                //     // $dv .= "</a>";
-                //     $dv .= "<span class='formatCurrency'>$currency</span>";
-                //     $dv .= '</li>';
-                // }
-                //     $dv .= '</ul>';
-
-                //     echo $dv;
-
-
-
-
-
-
-
-
                     $packages1 = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID WHERE p.mediaid = 1 ORDER BY p.packageid'); 
-                    // $dv1 = '<ul id="package-display">';
-                    // foreach ($packages as $package) {
-                    //     $currency = number_format($package['packageprice']);
-                    //     $dv .= '<li>';
-                    //     $dv .= "<div id='packageImg'>";
-                    //     // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
-                    //     $dv .= "<img src='$package[packageimg]' alt='Image of" . $package['packagename'] . "on hannahmacphotography.com' id='packageImg'>";
-                    //     $dv .= "</div>";
-                    //     $dv .= '<hr id="packageID">';
-                    //     $dv .= "<h2>$package[packagename]</h2>";
-                    //     // $dv .= "</a>";
-                    //     $dv .= "<span class='formatCurrency'>$currency</span>";
-                    //     $dv .= '</li>';
-                    // }
-                    //     $dv .= '</ul>';
-    
-                    //     echo $dv;
 
-
-                    // $dv1 = '<ul id="package-display">';
                     $dv1 = '<div class="container">';
                     $dv1 .= '<div class="row">';
                     foreach ($packages1 as $package1) {
                         $dv1 .= '<div class="col-sm-3 indPackage">';
                             $currency = number_format($package1['packageprice']);
-                            // $dv1 .= '<li>';
                             $dv1 .= "<div id='packageImg'>";
                             // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
                             $dv1 .= "<img class='img-responsive' src='$package1[packageimg]' alt='Image of" . $package1['packagename'] . "on hannahmacphotography.com' id='packageImg'>";
@@ -79,14 +22,61 @@
                             $dv1 .= "<h2>$package1[packagename]</h2>";
                             // $dv1 .= "</a>";
                             $dv1 .= "<span class='formatCurrency'>$currency</span>";
-                            // $dv1 .= '</li>';
+                            $dv1 .= "<h3>$package1[packagehours]</h3>";
+                            $dv1 .= "<h3>$package1[packagelocationcount]</h3>";
+                            $dv1 .= "<p>$package1[packagedescription]</p>";
                         $dv1 .= '</div>';
-
                     }
                     $dv1 .= '</div>';
                     $dv1 .= '</div>';
 
                     echo $dv1;
+                    echo "<br><br>";
+
+                    $packages2 = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID WHERE p.mediaid = 1 ORDER BY p.packageid'); 
+
+                    $dv2 = '<div class="container">';
+                    $dv2 .= '<div class="row">';
+                    foreach ($packages2 as $package2) {
+                        $dv2 .= '<div class="col-sm-3 indPackage">';
+                            $currency = number_format($package2['packageprice']);
+                            $dv2 .= "<div id='packageImg'>";
+                            // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
+                            $dv2 .= "<img class='img-responsive' src='$package2[packageimg]' alt='Image of" . $package2['packagename'] . "on hannahmacphotography.com' id='packageImg'>";
+                            $dv2 .= "</div>";
+                            $dv2 .= '<hr id="packageID">';
+                            $dv2 .= "<h2>$package2[packagename]</h2>";
+                            // $dv1 .= "</a>";
+                            $dv2 .= "<span class='formatCurrency'>$currency</span>";
+                        $dv2 .= '</div>';
+                    }
+                    $dv2 .= '</div>';
+                    $dv2 .= '</div>';
+
+                    echo $dv2;
+                    echo "<br><br>";
+
+                    $packages3 = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID WHERE p.mediaid = 1 ORDER BY p.packageid'); 
+
+                    $dv3 = '<div class="container">';
+                    $dv3 .= '<div class="row">';
+                    foreach ($packages3 as $package3) {
+                        $dv3 .= '<div class="col-sm-3 indPackage">';
+                            $currency = number_format($package3['packageprice']);
+                            $dv3 .= "<div id='packageImg'>";
+                            // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
+                            $dv3 .= "<img class='img-responsive' src='$package3[packageimg]' alt='Image of" . $package3['packagename'] . "on hannahmacphotography.com' id='packageImg'>";
+                            $dv3 .= "</div>";
+                            $dv3 .= '<hr id="packageID">';
+                            $dv3 .= "<h2>$package3[packagename]</h2>";
+                            // $dv1 .= "</a>";
+                            $dv3 .= "<span class='formatCurrency'>$currency</span>";
+                        $dv3 .= '</div>';
+                    }
+                    $dv3 .= '</div>';
+                    $dv3 .= '</div>';
+
+                    echo $dv3;
 
 
             ?>
