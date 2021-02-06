@@ -30,4 +30,9 @@ header #header{
     max-width: 200px;
 }
 
+.ph2{
+    margin-left: 30px;
+
+}
+
 .formatCurrency::before{content: "$";}

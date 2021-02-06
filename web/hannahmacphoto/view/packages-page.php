@@ -8,7 +8,7 @@
             <h1>Packages</h1>
                 <?php
                     $packages1 = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID WHERE p.mediaid = 1 ORDER BY p.packageid'); 
-                    echo "<h2>Photo Packages</h2>";
+                    echo "<h2 class ='ph2'>Photo Packages</h2>";
                     $dv1 = '<div class="container">';
                     $dv1 .= '<div class="row">';
                     foreach ($packages1 as $package1) {
@@ -34,7 +34,7 @@
                     echo "<br><br>";
 
                     $packages2 = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID WHERE p.mediaid = 2 ORDER BY p.packageid'); 
-                    echo "<h2>Video Packages</h2>";
+                    echo "<h2 class ='ph2'>Video Packages</h2>";
                     $dv2 = '<div class="container">';
                     $dv2 .= '<div class="row">';
                     foreach ($packages2 as $package2) {
@@ -60,7 +60,7 @@
                     echo "<br><br>";
 
                     $packages3 = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID WHERE p.mediaid = 3 ORDER BY p.packageid'); 
-                    echo "<h2>Photo and Video Packages</h2>";
+                    echo "<h2 class ='ph2'>Photo and Video Packages</h2>";
                     $dv3 = '<div class="container">';
                     $dv3 .= '<div class="row">';
                     foreach ($packages3 as $package3) {
