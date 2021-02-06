@@ -7,7 +7,7 @@
         <main>
             <h1>Packages</h1>
             <?php
-                $packages = $db->query('SELECT p.packageName, p.packageImg, p.packagePrice, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID', PDO::FETCH_ASSOC); 
+                $packages = $db->query('SELECT p.packageName, p.packageImg, p.packagePrice, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID'); 
                 $dv = '<ul id="package-display">';
                 foreach ($packages as $package) {
                     echo $package['packageName'];
