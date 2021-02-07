@@ -19,7 +19,7 @@
                 echo "<h2>Packages</h2>";
                 foreach ($packages as $package) {
                     // echo "<div>$package[packagename]</div>";
-                    echo "<a href= '../packages/?action=update-package' title='View the update package page'>$package[packagename]</a>";
+                    echo "<a href= '../packages/?action=update-package' title='View the update package page'>$package[packagename]</a><br>";
                 }
             ?>
         </main>
