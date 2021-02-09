@@ -74,7 +74,7 @@ switch ($action) {
         $_SESSION['userData'] = $userData;
         
         // Send them to the admin view
-        header('location: /hannahmacphoto/packages/');
+        header('location: /hannahmacphoto/packages/?action=package-management');
         // include '../view/package-management.php';
         exit;
     break;
