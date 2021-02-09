@@ -6,6 +6,7 @@
     <?php     
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
             echo $signOut;
+            echo $adminPage;
         } else{
             echo $signIn;
         } 
