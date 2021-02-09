@@ -8,7 +8,8 @@
         <meta name="description" content="<?php echo $currentPage ?> page for my site" />
 
         <title><?php echo $currentPage ?></title>
-        <link rel="stylesheet" media="screen" href="../hannahmacphoto/css/main.css"/>
+        <link rel="stylesheet" media="screen" href=<?php echo $specialLink?>/>
+        <link rel="stylesheet" media="screen" href="../css/main.css"/>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <!-- jQuery library -->
