@@ -1,5 +1,5 @@
 <?php
-    $homeCssLink = '<link rel="stylesheet" media="screen" href=../hannahmacphoto/css/main.css';
+    $homeCssLink = '<link rel="stylesheet" media="screen" href="../hannahmacphoto/css/main.css"';
     $regCssLink = '<link rel="stylesheet" media="screen" href="../css/main.css"';
 ?><!DOCTYPE html>
 <html lang="en">
