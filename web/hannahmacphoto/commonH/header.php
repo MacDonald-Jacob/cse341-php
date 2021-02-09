@@ -5,7 +5,7 @@
     <img src="/hannahmacphoto/imagesH/name.png" alt="my website name" id="headerName">
     <?php     
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-            echo "<span> $signOut - $adminPage</span>";
+            echo "<div> $signOut $adminPage</div>";
         } else{
             echo $signIn;
         } 
