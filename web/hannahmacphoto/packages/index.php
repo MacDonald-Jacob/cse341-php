@@ -28,7 +28,7 @@ switch ($action) {
         include '../view/add-package.php';
     break;
     case 'update-package':
-        include '../view/update-package.php?';
+        include '../view/update-package.php';
     break;
     case 'package-management':
         include '../view/package-management.php';
