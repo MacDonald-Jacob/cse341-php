@@ -10,8 +10,9 @@ require_once 'library/connections.php';
 
 //Build links
 $signIn = "<a href='../hannahmacphoto/accounts/?action=login' title='View the Admin sign in page'>Admin Login</a>";
-$signOut = "<a href= '../hannahmacphoto/accounts/?action=logout' title='Log out'>Log Out1</a>";
+$signOut = "<a href= '../hannahmacphoto/accounts/?action=logout' title='Log out'>Log Out</a>";
 $packagePage = "<a href='../hannahmacphoto/packages/?action=packages-page' title='View our Packages'>Packages</a>";
+$adminPage = "<a href= '../packages/?action=package-management' title='View the package management page'>Package Management</a>";
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 if ($action == NULL){

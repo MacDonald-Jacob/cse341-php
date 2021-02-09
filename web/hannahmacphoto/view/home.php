@@ -1,5 +1,5 @@
     <?php $currentPage = 'Home'; ?>
-    <?php require '../hannahmacphoto/commonH/head.php'; ?>
+    <?php require '../commonH/head.php'; ?>
 
     <body>
         <?php require '../hannahmacphoto/commonH/header.php'; ?>
