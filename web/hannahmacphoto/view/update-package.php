@@ -3,7 +3,7 @@
     if(!$_SESSION['loggedin']){
         header('Location: /hannahmacphoto/index.php');
     }
-?><?php $currentPage = 'Package Management'; ?>
+?><?php $currentPage = 'Update Package'; ?>
     <?php require '../commonH/head.php'; ?>
 
     <body>

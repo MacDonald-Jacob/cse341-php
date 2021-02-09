@@ -11,7 +11,7 @@
         <meta name="description" content="<?php echo $currentPage ?> page for my site" />
 
         <title><?php echo $currentPage ?></title>
-        <?php if ($currentPage = 'Home'){
+        <?php if ($currentPage === 'Home'){
             echo $homeCssLink;
         }
         else{
