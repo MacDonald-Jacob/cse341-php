@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+    $homeCssLink = '<link rel="stylesheet" media="screen" href=../hannahmacphoto/css/main.css';
+    $regCssLink = '<link rel="stylesheet" media="screen" href="../css/main.css"';
+?><!DOCTYPE html>
 <html lang="en">
     <head>
     <meta charset="UTF-8" /> <!-- Define the character coding: preferred encoding for e-mail and web pages -->
@@ -8,8 +11,13 @@
         <meta name="description" content="<?php echo $currentPage ?> page for my site" />
 
         <title><?php echo $currentPage ?></title>
-        <link rel="stylesheet" media="screen" href=<?php echo $specialLink?>/>
-        <link rel="stylesheet" media="screen" href="../css/main.css"/>
+        <?php if ($currentPage = 'Home'){
+            echo $homeCssLink;
+        }
+        else{
+            echo $regCssLink;
+        }
+        ?>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <!-- jQuery library -->

@@ -1,6 +1,4 @@
-    <?php $currentPage = 'Home'; ?>
-    <?php $specialLink = '../hannahmacphoto/css/main.css';?>
-'
+    <?php $currentPage = 'Home'; ?>'
     <?php require '../hannahmacphoto/commonH/head.php'; ?>
 
     <body>
