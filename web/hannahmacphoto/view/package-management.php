@@ -21,7 +21,7 @@
             <?php
                 foreach ($packages as $package) {
                     $packageID = $package['packageid'];
-                    $packageName = $package['packageName'];
+                    $packageName = $package['packagename'];
                     echo "<a href= '../packages/?action=update-package' title='View the update package page'>$packageName</a><br>";
                 }
             ?>
