@@ -18,6 +18,11 @@
     $package_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     $packageName = $package_rows[0]['packagename'];
+    $packageImg = $package_rows[0]['packageimg'];
+    $packagePrice = $package_rows[0]['packageprice'];
+    $packageHours = $package_rows[0]['packagehours'];
+    $packageLocationCount = $package_rows[0]['packagelocationcount'];
+    $packageDescription = $package_rows[0]['packagedescription'];
 ?>
     <?php require '../commonH/head.php'; ?>
 
@@ -36,7 +41,12 @@
                 }  
                 ?> required><br>
                 <label class="required" for="packageimg">Image Path</label>
-                <input type="text" id="packageimg" name="packageimg" size="26" value="/hannahmacphoto/imagesH/bridal.jpg" required><br>
+                <input type="text" id="packageimg" name="packageimg" size="26" placeholder="/hannahmacphoto/imagesH/bridal.jpg" 
+                <?php 
+                if(isset($packageImg)){
+                    echo "value='$packageImg'";
+                }  
+                ?> required><br>
                 <label class="required" for="packageprice">Package Price</label>
                 <input type="text" id="packageprice" name="packageprice" size="26"
                 <?php 
@@ -60,8 +70,8 @@
                 ?> required><br>
                 <label class="required" for="packagedescription">Description</label>
                 <textarea id="packagedescription" name="packagedescription" rows="5" cols="26" form="addPackageForm" required><?php
-                if(isset($_POST['packagedescription'])){
-                     echo htmlentities($_POST['packagedescription'], ENT_QUOTES);
+                if(isset($packageDescription)){
+                     echo htmlentities($packageDescription, ENT_QUOTES);
                 }?></textarea><br><br>
                 <input type="submit" name="submit" id="addPackageebtn" value="Add Package">
                 <input type="hidden" name="action" value="addPackage">
