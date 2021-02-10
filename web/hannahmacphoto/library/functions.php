@@ -14,24 +14,12 @@ function checkUserName($userName){
     }
 
 
-    //Build a display of vehicles within an unordered list.
-// function buildPackagesDisplay($packages){
-//     $dv = '<ul id="package-display">';
-//     foreach ($packages as $package) {
-//         $currency = number_format("$package[packagePrice]");
-//         $dv .= '<li>';
-//         $dv .= "<div id='packageImg'>";
-//         // $dv .= "<a href='/hannahmacphoto/packages/?action=individualPackage.php' title='View the individual package page.'>";
-//         $dv .= "<img src='$package[packageImg]' alt='Image of $package[packageName] on hannahmacphotography.com'>";
-//         $dv .= "</div>";
-//         $dv .= '<hr id="packageID">';
-//         $dv .= "<h2>$package[packageName]</h2>";
-//         $dv .= "</a>";
-//         $dv .= "<span class='formatCurrency'>$currency</span>";
-//         $dv .= '</li>';
-//     }
-//         $dv .= '</ul>';
-//         return $dv;
-//     }
+    function buildPackagesList($packages){
+        foreach ($packages as $package) {
+            $packageID = $package['packageid'];
+            $packageName = $package['packagename'];
+            echo "<a href= '../packages/?action=update-package&package-id=".urlencode($packageID)."' title='View the update package page'>$packageName</a><br>";
+        }
+    }
 
 ?>

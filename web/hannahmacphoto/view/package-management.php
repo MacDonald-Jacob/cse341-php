@@ -6,7 +6,7 @@
     $currentPage = 'Package Management'; 
     
     //Query
-    $packages = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID ORDER BY p.packageid'); 
+    // $packages = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID ORDER BY p.packageid'); 
 
     
     ?><?php require '../commonH/head.php'; ?>
@@ -19,11 +19,12 @@
             <a href= '../packages/?action=add-package' title='View the add package page'>Add Package</a>
             <h2> Update Packages</h2>
             <?php
-                foreach ($packages as $package) {
-                    $packageID = $package['packageid'];
-                    $packageName = $package['packagename'];
-                    echo "<a href= '../view/update-package.php' title='View the update package page'>$packageName</a><br>";
-                }
+            $packageList;
+                // foreach ($packages as $package) {
+                //     $packageID = $package['packageid'];
+                //     $packageName = $package['packagename'];
+                //     echo "<a href= '../packages/?action=update-package' title='View the update package page'>$packageName</a><br>";
+                // }
             ?>
         </main>
         <?php require '../commonH/footer.php'; ?>
