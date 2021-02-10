@@ -19,7 +19,9 @@
             <a href= '../packages/?action=add-package' title='View the add package page'>Add Package</a>
             <h2> Update Packages</h2>
             <?php
-                // echo $packageList;
+                $packages = getPackages();
+                $packageList = buildPackagesList($packages);
+                echo "$packageList";
                 // foreach ($packages as $package) {
                 //     $packageID = $package['packageid'];
                 //     $packageName = $package['packagename'];
