@@ -11,13 +11,13 @@
     }
     $package_id = htmlspecialchars($_GET['package_id']);
     
-    // $db = hannahmacphotoConnect();
-    // $stmt = $db->query('SELECT p.* FROM hmphoto.packages p WHERE p.packageid = :packageid'); 
-    // $stmt->bindValue(':packageid', $package_id, PDO::PARAM_INT);
-    // $stmt->execute();
-    // $package_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $db = hannahmacphotoConnect();
+    $stmt = $db->prepare('SELECT * FROM hmphoto.packages WHERE packageid = :packageid'); 
+    $stmt->bindValue(':packageid', $package_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $package_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // $packageName = $package_rows[0]['packagename'];
+    $packageName = $package_rows[0]['packagename'];
 ?>
     <?php require '../commonH/head.php'; ?>
 
@@ -25,7 +25,7 @@
         <?php require '../commonH/header.php'; ?>
         <?php require '../commonH/navBar.php'; ?>
         <main>
-            <h1>Updage <?php echo $package_id?> Package</h1>
+            <h1>Updage <?php echo $packageName?> Package</h1>
 
             <form action="/hannahmacphoto/packages/" method="post" id="addPackageForm">
                 <label class="required" for="packagename">Package Name</label>
