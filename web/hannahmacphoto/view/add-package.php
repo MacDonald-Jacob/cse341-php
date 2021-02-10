@@ -11,7 +11,11 @@
         <?php require '../commonH/navBar.php'; ?>
         <main>
             <h1>Add Package</h1>
-
+            <?php
+            if (isset($message)) {
+                echo $message;
+            }
+            ?>
             <form action="/hannahmacphoto/packages/" method="post" id="addPackageForm">
             <label class="required" for="mediaid">Service:</label><br>
                 <select id="mediaid" name="mediaid" >

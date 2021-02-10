@@ -27,6 +27,38 @@ if ($action == NULL){
 
 //Key Value Pair
 switch ($action) {
+    case 'addPackage':
+         // Filter and store the data
+         $mediaID = filter_input(INPUT_POST, 'mediaid', FILTER_SANITIZE_NUMBER_INT);
+         $packageName = filter_input(INPUT_POST, 'packagename', FILTER_SANITIZE_STRING);
+         $packagePrice = filter_input(INPUT_POST, 'packageprice', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+         $packageHours = filter_input(INPUT_POST, 'packagehours', FILTER_SANITIZE_STRING);
+         $packageImg = filter_input(INPUT_POST, 'packageimg', FILTER_SANITIZE_STRING);
+         $packageLocationCount = filter_input(INPUT_POST, 'packagelocationcount', FILTER_SANITIZE_NUMBER_INT);
+         $packageDescription = filter_input(INPUT_POST, 'packagedescription', FILTER_SANITIZE_STRING);
+ 
+         // Check for missing data
+         if(empty($mediaID) || empty($packageName) || empty($packagePrice) || empty($packageHours) || empty($packageImg) || empty($packageLocationCount) || empty($packageDescription)){
+             $message = "<p class='notice'>Please provide information for all empty form fields.</p>";
+             include '../view/add-package.php';
+             exit; 
+         }
+ 
+         // Send the data to the model
+         $packageNameOutcome = newPackage($mediaID, $packageName, $packagePrice, $packageHours, $packageImg, $packageLocationCount, $packageDescription);
+ 
+         // Check and report the result
+         if($packageNameOutcome === 1){
+             $message = "<p class='notice'>Thank you. The $packageName has been added.</p>";
+             include '../view/add-package.php';
+             exit;
+         } else {
+             $message = "<p class='notice'>Sorry, but adding the $packageName failed. Please try again.</p>";
+             include '../view/add-package.php';
+             exit;
+         }
+     break;
+
     case 'add-package':
         include '../view/add-package.php';
     break;
