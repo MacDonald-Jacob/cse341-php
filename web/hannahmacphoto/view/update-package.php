@@ -3,14 +3,22 @@
     if(!$_SESSION['loggedin']){
         header('Location: /hannahmacphoto/index.php');
     }
-?><?php $currentPage = 'Update Package'; ?>
+?><?php $currentPage = 'Update Package'; 
+        
+if (!isset($_GET['package_id'])){
+    header('Location: /hannahmacphoto/index.php');
+
+}
+$package_id = htmlspecialchars($_GET['package_id']); 
+
+?>
     <?php require '../commonH/head.php'; ?>
 
     <body>
         <?php require '../commonH/header.php'; ?>
         <?php require '../commonH/navBar.php'; ?>
         <main>
-            <h1>Updage Package</h1>
+            <h1>Updage Package <?php echo $package_id?></h1>
 
             <form action="/hannahmacphoto/packages/" method="post" id="addPackageForm">
                 <label class="required" for="packagename">Package Name</label>

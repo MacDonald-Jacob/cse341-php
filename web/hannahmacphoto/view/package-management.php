@@ -22,11 +22,7 @@
                 $packages = getPackages();
                 $packageList = buildPackagesList($packages);
                 echo "$packageList";
-                // foreach ($packages as $package) {
-                //     $packageID = $package['packageid'];
-                //     $packageName = $package['packagename'];
-                //     echo "<a href= '../packages/?action=update-package' title='View the update package page'>$packageName</a><br>";
-                // }
+
             ?>
         </main>
         <?php require '../commonH/footer.php'; ?>
