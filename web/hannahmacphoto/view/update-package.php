@@ -23,6 +23,7 @@
     $packageHours = $package_rows[0]['packagehours'];
     $packageLocationCount = $package_rows[0]['packagelocationcount'];
     $packageDescription = $package_rows[0]['packagedescription'];
+    $packageID
 ?>
     <?php require '../commonH/head.php'; ?>
 
@@ -37,6 +38,12 @@
             }
             ?>
             <form action="/hannahmacphoto/packages/" method="post" id="updatePackageForm">
+            <label class="required" for="mediaid">Service:</label><br>
+                <select id="mediaid" name="mediaid" >
+                    <option value=1>Photo</option>
+                    <option value=2>Video</option>
+                    <option value=3>Photo and Video</option>
+                </select><br>
                 <label class="required" for="packagename">Package Name:</label><br>
                 <input type="text" id="packagename" name="packagename" size="26" 
                 <?php 
@@ -79,7 +86,7 @@
                 }?></textarea><br><br>
                 <input type="submit" name="submit" id="updatePackageebtn" value="Update Package">
                 <input type="hidden" name="action" value="updatePackage">
-                <input type="hidden" name="packageid" value="<?php echo $package_id?>"
+                <input type="number" name="packageid" value="<?php echo $package_id?>"
    >
             </form>  
 
