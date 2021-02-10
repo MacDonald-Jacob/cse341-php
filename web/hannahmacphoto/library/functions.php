@@ -18,7 +18,7 @@ function checkUserName($userName){
         foreach ($packages as $package) {
             $packageID = $package['packageid'];
             $packageName = $package['packagename'];
-            echo "<a href= '../packages/?action=update-package&package_name=".urlencode($packageName)."' title='View the update package page'>$packageName</a><br>";
+            echo "<a href= '../packages/?action=update-package&package_id=".urlencode($packageID)."' title='View the update package page'>$packageName</a><br>";
         }
     }
 

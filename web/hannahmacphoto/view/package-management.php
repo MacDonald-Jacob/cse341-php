@@ -4,11 +4,7 @@
         header('Location: /hannahmacphoto/index.php');
     }
     $currentPage = 'Package Management'; 
-    
-    //Query
-    // $packages = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID ORDER BY p.packageid'); 
 
-    
     ?><?php require '../commonH/head.php'; ?>
 
     <body>
