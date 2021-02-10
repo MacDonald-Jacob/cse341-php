@@ -35,4 +35,24 @@ function newPackage($mediaID, $packageName, $packagePrice, $packageHours, $packa
     // Return the indication of success (rows changed).
     return $rowsChanged;
 }
+
+
+// Update Package
+function updatePackage($mediaID, $packageName, $packagePrice, $packageHours, $packageImg, $packageLocationCount, $packageDescription, $packageID){
+    $db = hannahmacphotoConnect();
+    $sql = 'UPDATE hmphoto.packages SET mediaid = :mediaid, packagename = :packagename, packageprice = :packageprice, packagehours = :packagehours, packageimg = :packageimg, packagelocationcount = :packagelocationcount, packagedescription = :packagedescription WHERE packageid = :packageid';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':mediaid', $mediaID, PDO::PARAM_INT);
+    $stmt->bindValue(':packagename', $packageName, PDO::PARAM_STR);
+    $stmt->bindValue(':packageprice', $packagePrice, PDO::PARAM_INT);
+    $stmt->bindValue(':packagehours', $packageHours, PDO::PARAM_STR);
+    $stmt->bindValue(':packageimg', $packageImg, PDO::PARAM_STR);
+    $stmt->bindValue(':packagelocationcount', $packageLocationCount, PDO::PARAM_INT);
+    $stmt->bindValue(':packagedescription', $packageDescription, PDO::PARAM_STR);
+    $stmt->bindValue(':packageid', $packageID, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}
 ?>

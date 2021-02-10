@@ -62,6 +62,36 @@ switch ($action) {
     case 'add-package':
         include '../view/add-package.php';
     break;
+
+    case 'updatePackage':
+        $mediaID = filter_input(INPUT_POST, 'mediaid', FILTER_SANITIZE_NUMBER_INT);
+        $packageName = filter_input(INPUT_POST, 'packagename', FILTER_SANITIZE_STRING);
+        $packagePrice = filter_input(INPUT_POST, 'packageprice', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+        $packageHours = filter_input(INPUT_POST, 'packagehours', FILTER_SANITIZE_STRING);
+        $packageImg = filter_input(INPUT_POST, 'packageimg', FILTER_SANITIZE_STRING);
+        $packageLocationCount = filter_input(INPUT_POST, 'packagelocationcount', FILTER_SANITIZE_NUMBER_INT);
+        $packageDescription = filter_input(INPUT_POST, 'packagedescription', FILTER_SANITIZE_STRING);
+        $packageID = filter_input(INPUT_POST, 'packageid', FILTER_SANITIZE_NUMBER_INT);
+
+        if(empty($mediaID) || empty($packageName) || empty($packagePrice) || empty($packageHours) || empty($packageImg) || empty($packageLocationCount) || empty($packageDescription)){
+            $message = "<p class='notice'>Please provide information for all empty form fields.</p>";
+            include '../view/update-package.php';
+            exit; 
+        }
+
+        $updateResult = updatePackage($mediaID, $packageName, $packagePrice, $packageHours, $packageImg, $packageLocationCount, $packageDescription, $packageID);
+
+        // Check and report the result
+        if($updateResult){
+            $message = "<p class='notice'>Thank you. The $packageName was successfully updated.</p>";
+            include '../view/update-package.php';
+            exit;
+        } else {
+            $message = "<p class='notice'>Sorry, but updating the $packageName failed. Please try again.</p>";
+            include '../view/update-package.php';
+            exit;
+        }
+    break;
     case 'update-package':
         include '../view/update-package.php';
     break;

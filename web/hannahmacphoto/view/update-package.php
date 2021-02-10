@@ -31,7 +31,11 @@
         <?php require '../commonH/navBar.php'; ?>
         <main>
             <h1>Updage <?php echo $packageName?> Package</h1>
-
+            <?php
+            if (isset($message)) {
+                echo $message;
+            }
+            ?>
             <form action="/hannahmacphoto/packages/" method="post" id="addPackageForm">
                 <label class="required" for="packagename">Package Name:</label><br>
                 <input type="text" id="packagename" name="packagename" size="26" 
@@ -74,7 +78,7 @@
                      echo htmlentities($packageDescription, ENT_QUOTES);
                 }?></textarea><br><br>
                 <input type="submit" name="submit" id="addPackageebtn" value="Update Package">
-                <input type="hidden" name="action" value="addPackage">
+                <input type="hidden" name="action" value="updatePackage">
             </form>  
 
         </main>
