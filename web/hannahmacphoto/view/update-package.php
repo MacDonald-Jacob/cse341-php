@@ -73,7 +73,7 @@
                 if(isset($packageDescription)){
                      echo htmlentities($packageDescription, ENT_QUOTES);
                 }?></textarea><br><br>
-                <input type="submit" name="submit" id="addPackageebtn" value="Add Package">
+                <input type="submit" name="submit" id="addPackageebtn" value="Update Package">
                 <input type="hidden" name="action" value="addPackage">
             </form>  
 
