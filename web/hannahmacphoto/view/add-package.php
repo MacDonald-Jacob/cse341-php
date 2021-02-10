@@ -13,6 +13,12 @@
             <h1>Add Package</h1>
 
             <form action="/hannahmacphoto/packages/" method="post" id="addPackageForm">
+            <label class="required" for="mediaid">Service:</label><br>
+                <select id="mediaid" name="mediaid" size="26" >
+                    <option value=1>Photo</option>
+                    <option value=2>Video</option>
+                    <option value=3>Photo and Video</option>
+                </select>
                 <label class="required" for="packagename">Package Name:</label><br>
                 <input type="text" id="packagename" name="packagename" size="26" 
                 <?php 
@@ -21,7 +27,7 @@
                 }  
                 ?> required><br>
                 <label class="required" for="packageimg">Image Path:</label><br>
-                <input type="text" id="packageimg" name="packageimg" size="26" value="/hannahmacphoto/imagesH/bridal.jpg" required>
+                <input type="text" id="packageimg" name="packageimg" size="26" value="/hannahmacphoto/imagesH/bridal.jpg" required><br>
                 <label class="required" for="packageprice">Package Price:</label><br>
                 <input type="text" id="packageprice" name="packageprice" size="26"
                 <?php 
