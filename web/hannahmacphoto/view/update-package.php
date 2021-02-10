@@ -30,13 +30,13 @@
         <?php require '../commonH/header.php'; ?>
         <?php require '../commonH/navBar.php'; ?>
         <main>
-            <h1>Updage <?php echo $packageName?> Package</h1>
+            <h1>Update <?php echo $packageName?> Package</h1>
             <?php
             if (isset($message)) {
                 echo $message;
             }
             ?>
-            <form action="/hannahmacphoto/packages/" method="post" id="addPackageForm">
+            <form action="/hannahmacphoto/packages/" method="post" id="updatePackageForm">
                 <label class="required" for="packagename">Package Name:</label><br>
                 <input type="text" id="packagename" name="packagename" size="26" 
                 <?php 
@@ -77,8 +77,10 @@
                 if(isset($packageDescription)){
                      echo htmlentities($packageDescription, ENT_QUOTES);
                 }?></textarea><br><br>
-                <input type="submit" name="submit" id="addPackageebtn" value="Update Package">
+                <input type="submit" name="submit" id="updatePackageebtn" value="Update Package">
                 <input type="hidden" name="action" value="updatePackage">
+                <input type="hidden" name="packageid" value="<?php echo $package_id?>"
+   >
             </form>  
 
         </main>
