@@ -19,8 +19,6 @@ $addPackage = "<a href= '../packages/?action=add-package' title='View the add pa
 $adminPage = "<a href= '../packages/?action=package-management' title='View the package management page'>Package Management</a>";
 $packagePage = "<a href='../packages/?action=packages-page' title='View our Packages'>Packages</a>";
 
-// $packages = getPackages();
-// $packageList = buildPackagesList($packages);
 
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 if ($action == NULL){
