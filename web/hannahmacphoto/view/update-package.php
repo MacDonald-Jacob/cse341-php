@@ -55,7 +55,7 @@
                 }  
                 ?> required><br>
                 <label class="required" for="packagehours">Package Hours</label>
-                <input type="number" id="packagehours" name="packagehours" min="1" step="any" 
+                <input type="text" id="packagehours" name="packagehours" size="26" 
                 <?php 
                 if(isset($packageHours)){
                     echo "value='$packageHours'";
@@ -68,8 +68,8 @@
                     echo "value='$packageLocationCount'";
                 }  
                 ?> required><br>
-                <label class="required" for="packagedescription">Description</label>
-                <textarea id="packagedescription" name="packagedescription" rows="5" cols="26" form="addPackageForm" required><?php
+                <label class="required" for="packagedescription">Description</label><br>
+                <textarea id="packagedescription" name="packagedescription" rows="5" cols="50" form="addPackageForm" required><?php
                 if(isset($packageDescription)){
                      echo htmlentities($packageDescription, ENT_QUOTES);
                 }?></textarea><br><br>
