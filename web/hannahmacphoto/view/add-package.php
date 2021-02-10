@@ -14,11 +14,11 @@
 
             <form action="/hannahmacphoto/packages/" method="post" id="addPackageForm">
             <label class="required" for="mediaid">Service:</label><br>
-                <select id="mediaid" name="mediaid" size="26" >
+                <select id="mediaid" name="mediaid" >
                     <option value=1>Photo</option>
                     <option value=2>Video</option>
                     <option value=3>Photo and Video</option>
-                </select>
+                </select><br>
                 <label class="required" for="packagename">Package Name:</label><br>
                 <input type="text" id="packagename" name="packagename" size="26" 
                 <?php 
