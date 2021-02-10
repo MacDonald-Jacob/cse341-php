@@ -22,7 +22,7 @@
                 foreach ($packages as $package) {
                     $packageID = $package['packageid'];
                     $packageName = $package['packagename'];
-                    echo "<a href= '../packages/?action=update-package' title='View the update package page'>$packageName</a><br>";
+                    echo "<a href= '../hannahmacphoto/view/packages' title='View the update package page'>$packageName</a><br>";
                 }
             ?>
         </main>

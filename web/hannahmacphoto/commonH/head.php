@@ -1,6 +1,8 @@
 <?php
     $homeCssLink = '<link rel="stylesheet" media="screen" href="../hannahmacphoto/css/main.css"';
     $regCssLink = '<link rel="stylesheet" media="screen" href="../css/main.css"';
+    $homeScriptLink = '<script src="../hannahmacphoto/scripts/main.js"></script>';
+    $regScriptLink = '<script src="../scripts/main.js"></script>';
 ?><!DOCTYPE html>
 <html lang="en">
     <head>
@@ -24,6 +26,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <script src="../scripts/main.js"></script>
+        <?php if ($currentPage === 'Home'){
+            echo $homeScriptLink;
+        }
+        else{
+            echo $regScriptLink;
+        }
+        ?>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     </head>
