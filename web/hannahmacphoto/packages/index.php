@@ -99,11 +99,11 @@ switch ($action) {
     break;
 
     case 'delete-package':
-        $packageID = filter_input(INPUT_GET, 'packageid', FILTER_VALIDATE_INT);
-        $packageInfo = getPackageInfo($packageID);
-        if(count($packageInfo)<1){
-            $message = 'Sorry, no package information could be found.';
-        }
+        // $packageID = filter_input(INPUT_GET, 'packageid', FILTER_VALIDATE_INT);
+        // $packageInfo = getPackageInfo($packageID);
+        // if(count($packageInfo)<1){
+        //     $message = 'Sorry, no package information could be found.';
+        // }
         include '../view/delete-package.php';
         exit;
     break;

@@ -8,16 +8,16 @@ return $packages;
 }
 
 // Get package information by packageid
-function getPackageInfo($packageID){
-    $db = hannahmacphotoConnect();
-    $sql = 'SELECT * FROM hmphoto.packages WHERE packageid = :packageid';
-    $stmt = $db->prepare($sql);
-    $stmt->bindValue(':packageid', $packageID, PDO::PARAM_INT);
-    $stmt->execute();
-    $packageInfo = $stmt->fetch(PDO::FETCH_ASSOC);
-    $stmt->closeCursor();
-    return $packageInfo;
-   }
+// function getPackageInfo($packageID){
+//     $db = hannahmacphotoConnect();
+//     $sql = 'SELECT * FROM hmphoto.packages WHERE packageid = :packageid';
+//     $stmt = $db->prepare($sql);
+//     $stmt->bindValue(':packageid', $packageID, PDO::PARAM_INT);
+//     $stmt->execute();
+//     $packageInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+//     $stmt->closeCursor();
+//     return $packageInfo;
+//    }
 
 // New Package
 function newPackage($mediaID, $packageName, $packagePrice, $packageHours, $packageImg, $packageLocationCount, $packageDescription){
