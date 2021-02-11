@@ -13,14 +13,6 @@ function checkUserName($userName){
         return preg_match($pattern, $userPassword);
     }
 
-
-    // function buildPackagesList($packages){
-    //     foreach ($packages as $package) {
-    //         $packageID = $package['packageid'];
-    //         $packageName = $package['packagename'];
-    //         echo "<a href= '../packages/?action=update-package&package_id=".urlencode($packageID)."' title='View the update package page'>$packageName</a><br>";
-    //     }
-    // }
     
 
     function buildPackagesList($packages){

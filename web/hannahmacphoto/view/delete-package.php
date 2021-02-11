@@ -5,6 +5,20 @@
     }
     $currentPage = 'Delete Package'; 
 
+    if (!isset($_GET['package_id'])){
+        header('Location: /hannahmacphoto/index.php');
+
+    }
+    $package_id = htmlspecialchars($_GET['package_id']);
+    
+    $db = hannahmacphotoConnect();
+    $stmt = $db->prepare('SELECT * FROM hmphoto.packages WHERE packageid = :packageid'); 
+    $stmt->bindValue(':packageid', $package_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $package_rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $packageName = $package_rows[0]['packagename'];
+    $packageDescription = $package_rows[0]['packagedescription'];
     
     ?>
     <?php require '../commonH/head.php'; ?>
@@ -20,12 +34,11 @@
             }
             ?>
             <form action="/hannahmacphoto/packages/" method="post" id="deletePackageForm">
-            <label class="required" for="mediaid">Service:</label><br>
                 <label class="required" for="packagename">Package Name:</label><br>
                 <input type="text" id="packagename" name="packagename" size="26" readonly
                 <?php 
-                if(isset($packageInfo['packagename'])){
-                    echo "value='$packageInfo[packagename]'";
+                if(isset($packageName)){
+                    echo "value='$packageName'";
                 }  
                 ?>><br> 
                 <label class="required" for="packagedescription">Description:</label><br>
