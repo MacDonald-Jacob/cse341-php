@@ -7,7 +7,7 @@ session_start();
 
 // Get the database connection file
 require_once '../library/connections.php';
-// Get the vehicle model.
+// Get the package model.
 require_once '../models/package-model.php';
 // Get the functions.php
 require_once '../library/functions.php';

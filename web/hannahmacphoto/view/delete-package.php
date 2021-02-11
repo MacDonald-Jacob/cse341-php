@@ -49,8 +49,8 @@
                 <input type="submit" name="submit" id="deletePackageebtn" value="Delete Package">
                 <input type="hidden" name="action" value="deletePackage">
                 <input type="number" name="packageid" value="
-                <?php if(isset($packageID)){
-                    echo $packageID;}
+                <?php if(isset($package_id)){
+                    echo $package_id;}
                 ?>">
             </form>  
 
