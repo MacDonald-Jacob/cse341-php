@@ -25,7 +25,7 @@ function checkUserName($userName){
 
     function buildPackagesList($packages){
         $dataTable = '<thead>';
-        $dataTable .= '<tr><th>Package Name</th><td>&nbsp;</td><td>&nbsp;</td></tr>';
+        $dataTable .= '<tr><th>Package Name</th><th> </th><th> </th></tr>';
         $dataTable .= '</thead>'; 
         // Set up the table body 
         $dataTable .= '<tbody>'; 

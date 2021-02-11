@@ -14,11 +14,11 @@
             <h1>Package Management</h1>
             <a href= '../packages/?action=add-package' title='View the add package page'>Add Package</a>
             <h2> Update Packages</h2>
+            <table id="inventoryDisplay">
             <?php
-
                 echo "$packageList";
-
             ?>
+            </table>
         </main>
         <?php require '../commonH/footer.php'; ?>
     </body>
