@@ -23,6 +23,7 @@
     $packageHours = $package_rows[0]['packagehours'];
     $packageLocationCount = $package_rows[0]['packagelocationcount'];
     $packageDescription = $package_rows[0]['packagedescription'];
+    $mediaID = $package_rows[0]['mediaid'];
 ?>
     <?php require '../commonH/head.php'; ?>
 
@@ -39,9 +40,31 @@
             <form action="/hannahmacphoto/packages/" method="post" id="updatePackageForm">
             <label class="required" for="mediaid">Service:</label><br>
                 <select id="mediaid" name="mediaid" >
-                    <option value=1>Photo</option>
-                    <option value=2>Video</option>
-                    <option value=3>Photo and Video</option>
+                    <option value=1 
+                    <?php 
+                    if (isset($mediaID)){
+                        if ($mediaID === 1){
+                            echo "selected";
+                        }
+                    }
+                    ?>
+                    >Photo</option>
+                    <option value=2 
+                    <?php 
+                    if (isset($mediaID)){
+                        if ($mediaID === 2){
+                            echo "selected";
+                        }
+                    }
+                    ?>>Video</option>
+                    <option value=3 
+                    <?php 
+                    if (isset($mediaID)){
+                        if ($mediaID === 3){
+                            echo "selected";
+                        }
+                    }
+                    ?>>Photo and Video</option>
                 </select><br>
                 <label class="required" for="packagename">Package Name:</label><br>
                 <input type="text" id="packagename" name="packagename" size="26" 
