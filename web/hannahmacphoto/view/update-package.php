@@ -85,7 +85,7 @@
                 }?></textarea><br><br>
                 <input type="submit" name="submit" id="updatePackageebtn" value="Update Package">
                 <input type="hidden" name="action" value="updatePackage">
-                <input type="number" name="packageid" value="<?php echo $package_id?>"
+                <input type="hidden" name="packageid" value="<?php echo $package_id?>"
    >
             </form>  
 
