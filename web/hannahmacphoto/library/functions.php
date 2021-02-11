@@ -14,12 +14,31 @@ function checkUserName($userName){
     }
 
 
+    // function buildPackagesList($packages){
+    //     foreach ($packages as $package) {
+    //         $packageID = $package['packageid'];
+    //         $packageName = $package['packagename'];
+    //         echo "<a href= '../packages/?action=update-package&package_id=".urlencode($packageID)."' title='View the update package page'>$packageName</a><br>";
+    //     }
+    // }
+    
+
     function buildPackagesList($packages){
+        $dataTable = '<thead>';
+        $dataTable .= '<tr><th>Package Name</th><td>&nbsp;</td><td>&nbsp;</td></tr>';
+        $dataTable .= '</thead>'; 
+        // Set up the table body 
+        $dataTable .= '<tbody>'; 
+        // Iterate over all vehicles in the array and put each in a row 
         foreach ($packages as $package) {
             $packageID = $package['packageid'];
             $packageName = $package['packagename'];
-            echo "<a href= '../packages/?action=update-package&package_id=".urlencode($packageID)."' title='View the update package page'>$packageName</a><br>";
+            $dataTable .= "<tr><td>$packageName</td>"; 
+            $dataTable .= "<td><a href= '../packages/?action=update-package&package_id=".urlencode($packageID)."' title='View the update package page'>Modify</a></td>"; 
+            $dataTable .= "<td><a href= '../packages/?action=delete-package&package_id=".urlencode($packageID)."' title='View the update package page'>Delete</a></td></tr>"; 
         }
-    }
+        $dataTable .= '</tbody>'; 
 
+        return $dataTable;
+    }
 ?>

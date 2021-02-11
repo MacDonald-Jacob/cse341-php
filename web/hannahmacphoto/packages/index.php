@@ -98,6 +98,8 @@ switch ($action) {
         include '../view/update-package.php';
     break;
     case 'package-management':
+        $packages = getPackages();
+        $packageList = buildPackagesList($packages);
         include '../view/package-management.php';
     break;
     default:

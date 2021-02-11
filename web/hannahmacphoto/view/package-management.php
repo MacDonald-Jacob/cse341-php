@@ -15,8 +15,7 @@
             <a href= '../packages/?action=add-package' title='View the add package page'>Add Package</a>
             <h2> Update Packages</h2>
             <?php
-                $packages = getPackages();
-                $packageList = buildPackagesList($packages);
+
                 echo "$packageList";
 
             ?>
