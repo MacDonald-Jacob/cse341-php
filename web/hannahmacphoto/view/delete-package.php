@@ -39,9 +39,9 @@
                 if(isset($packageName)){
                     echo "value='$packageName'";
                 }  
-                ?> required><br>
+                ?> readonly><br>
                 <label class="required" for="packagedescription">Description</label><br>
-                <textarea id="packagedescription" name="packagedescription" rows="5" cols="26" form="updatePackageForm" required><?php
+                <textarea id="packagedescription" name="packagedescription" rows="5" cols="26" form="updatePackageForm" readonly><?php
                 if(isset($packageDescription)){
                      echo htmlentities($packageDescription, ENT_QUOTES);
                 }?></textarea><br><br>
