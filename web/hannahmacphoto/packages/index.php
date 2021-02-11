@@ -97,6 +97,35 @@ switch ($action) {
     case 'update-package':
         include '../view/update-package.php';
     break;
+
+    case 'delete-package':
+        $packageID = filter_input(INPUT_GET, 'packageid', FILTER_VALIDATE_INT);
+        $packageInfo = getPackageInfo($packageID);
+        if(count($packageInfo)<1){
+            $message = 'Sorry, no package information could be found.';
+        }
+        include '../view/vehicle-delete.php';
+        exit;
+    break;
+
+    case 'deletePackage':
+        $packageName = filter_input(INPUT_POST, 'packagename', FILTER_SANITIZE_STRING);
+        $packageID = filter_input(INPUT_POST, 'packageid', FILTER_SANITIZE_NUMBER_INT);
+
+        $deleteResult = deletePackage($packageID);
+        if ($deleteResult) {
+            $message = "<p class='notice'>Congratulations, the $packageName was successfully deleted.</p>";
+            $_SESSION['message'] = $message;
+            header('location: /hannahmacphoto/packages/');
+            exit;
+        } else {
+            $message = "<p class='notice'>Error. The package was not deleted.</p>";
+            $_SESSION['message'] = $message;
+            header('location: /hannahmacphoto/packages/');            
+            exit;
+        }
+    break;
+
     case 'package-management':
         $packages = getPackages();
         $packageList = buildPackagesList($packages);

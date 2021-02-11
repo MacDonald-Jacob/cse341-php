@@ -7,7 +7,17 @@ function getPackages()
 return $packages;
 }
 
-
+// Get package information by packageid
+function getPackageInfo($packageID){
+    $db = hannahmacphotoConnect();
+    $sql = 'SELECT * FROM hmphoto.packages WHERE packageid = :packageid';
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue(':packageid', $packageID, PDO::PARAM_INT);
+    $stmt->execute();
+    $packageInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+    $stmt->closeCursor();
+    return $packageInfo;
+   }
 
 // New Package
 function newPackage($mediaID, $packageName, $packagePrice, $packageHours, $packageImg, $packageLocationCount, $packageDescription){
@@ -49,6 +59,18 @@ function updatePackage($mediaID, $packageName, $packagePrice, $packageHours, $pa
     $stmt->bindValue(':packageimg', $packageImg, PDO::PARAM_STR);
     $stmt->bindValue(':packagelocationcount', $packageLocationCount, PDO::PARAM_INT);
     $stmt->bindValue(':packagedescription', $packageDescription, PDO::PARAM_STR);
+    $stmt->bindValue(':packageid', $packageID, PDO::PARAM_INT);
+    $stmt->execute();
+    $rowsChanged = $stmt->rowCount();
+    $stmt->closeCursor();
+    return $rowsChanged;
+}
+
+// Delete Package
+function deletePackage($packageID){
+    $db = hannahmacphotoConnect();
+    $sql = 'DELETE FROM hmphoto.packages WHERE packageid = :packageid';
+    $stmt = $db->prepare($sql);
     $stmt->bindValue(':packageid', $packageID, PDO::PARAM_INT);
     $stmt->execute();
     $rowsChanged = $stmt->rowCount();

@@ -35,8 +35,10 @@
                 }?></textarea><br><br>
                 <input type="submit" name="submit" id="deletePackageebtn" value="Delete Package">
                 <input type="hidden" name="action" value="deletePackage">
-                <input type="hidden" name="packageid" value="<?php echo $package_id;?>"
-
+                <input type="hidden" name="packageid" value="
+                <?php if(isset($packageInfo['packageid'])){
+                    echo $packageInfo['packageid'];}
+                ?>">
             </form>  
 
         </main>
