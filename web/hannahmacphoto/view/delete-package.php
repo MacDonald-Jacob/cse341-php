@@ -19,7 +19,7 @@
 
     $packageName = $package_rows[0]['packagename'];
     $packageDescription = $package_rows[0]['packagedescription'];
-    $packageID = $$package_rows[0]['packageid'];
+    $packageID = $package_rows[0]['packageid'];
     
     ?>
     <?php require '../commonH/head.php'; ?>
