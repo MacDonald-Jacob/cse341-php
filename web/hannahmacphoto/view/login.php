@@ -8,9 +8,9 @@
             <h1>Sign In</h1>
             <?php
             // We are calling the message from the session 
-            if (isset($_SESSION['message'])) {
-                echo $_SESSION['message'];
-            }
+            // if (isset($_SESSION['message'])) {
+            //     echo $_SESSION['message'];
+            // }
             if (isset($message)) {
                 echo $message;
                }
