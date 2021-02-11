@@ -74,8 +74,8 @@ switch ($action) {
         $packageID = filter_input(INPUT_POST, 'packageid', FILTER_SANITIZE_NUMBER_INT);
 
         if(empty($mediaID) || empty($packageName) || empty($packagePrice) || empty($packageHours) || empty($packageImg) || empty($packageLocationCount) || empty($packageDescription)){
-            $message = "<p>Please provide information for all empty form fields.</p>";
-            $_SESSION['message'] = $message;
+            // $message = "<p>Please provide information for all empty form fields.</p>";
+            // $_SESSION['message'] = $message;
             header('location: /hannahmacphoto/packages/?action=update-package&package_id='.urlencode($packageID));
             exit; 
         }
@@ -84,9 +84,9 @@ switch ($action) {
 
         // Check and report the result
         if($updateResult === 1){
-            $message = "<p>Thank you. The $packageName was successfully updated.</p>";
-            $_SESSION['message'] = $message;
-            header('location: /hannahmacphoto/packages/?action=update-package&package_id='.urlencode($packageID));            exit;
+            // $message = "<p>Thank you. The $packageName was successfully updated.</p>";
+            // $_SESSION['message'] = $message;
+            header('location: /hannahmacphoto/packages/');            exit;
         } else {
             $message = "<p class='notice'>Sorry, but updating the $packageName failed. Please try again.</p>";
             $_SESSION['message'] = $message;
