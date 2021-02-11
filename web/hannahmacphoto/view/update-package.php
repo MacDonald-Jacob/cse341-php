@@ -80,7 +80,7 @@
                 }  
                 ?> required><br>
                 <label class="required" for="packagedescription">Description</label><br>
-                <textarea id="packagedescription" name="packagedescription" rows="5" cols="26" form="addPackageForm" required><?php
+                <textarea id="packagedescription" name="packagedescription" rows="5" cols="26" form="updatePackageForm" required><?php
                 if(isset($packageDescription)){
                      echo htmlentities($packageDescription, ENT_QUOTES);
                 }?></textarea><br><br>

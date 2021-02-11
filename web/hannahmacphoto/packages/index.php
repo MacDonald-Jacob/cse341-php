@@ -82,7 +82,7 @@ switch ($action) {
         $updateResult = updatePackage($mediaID, $packageName, $packagePrice, $packageHours, $packageImg, $packageLocationCount, $packageDescription, $packageID);
 
         // Check and report the result
-        if($updateResult){
+        if($updateResult === 1){
             $message = "<p class='notice'>Thank you. The $packageName was successfully updated.</p>";
             include '../view/update-package.php';
             exit;
@@ -92,6 +92,7 @@ switch ($action) {
             exit;
         }
     break;
+    
     case 'update-package':
         include '../view/update-package.php';
     break;
