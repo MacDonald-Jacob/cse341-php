@@ -6,6 +6,11 @@
         <?php require '../commonH/navBar.php'; ?>
         <main>
             <h1>Packages</h1>
+            <?php
+            if (isset($message)) {
+                echo $message;
+            }
+            ?>
                 <?php
                     $packages1 = $db->query('SELECT p.*, m.service FROM hmphoto.packages p LEFT JOIN hmphoto.media m ON p.mediaID = m.mediaID WHERE p.mediaid = 1 ORDER BY p.packageid'); 
                     echo "<h2 class ='ph2'>Photo Packages</h2>";

@@ -75,7 +75,7 @@ switch ($action) {
 
         if(empty($mediaID) || empty($packageName) || empty($packagePrice) || empty($packageHours) || empty($packageImg) || empty($packageLocationCount) || empty($packageDescription)){
             $message = "<p>Please provide information for all empty form fields.</p>";
-            header('location: /hannahmacphoto/view/update-packages?action=update-package&package_id='.urlencode($packageID));
+            header('location: /hannahmacphoto/packages/?action=update-package&package_id='.urlencode($packageID));
             exit; 
         }
 
@@ -83,7 +83,7 @@ switch ($action) {
 
         // Check and report the result
         if($updateResult === 1){
-            $message = "<p class='notice'>Thank you. The $packageName was successfully updated.</p>";
+            $message = "<p>Thank you. The $packageName was successfully updated.</p>";
             header('location: /hannahmacphoto/packages/');
             exit;
         } else {
