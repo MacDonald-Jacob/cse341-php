@@ -104,7 +104,7 @@ switch ($action) {
         if(count($packageInfo)<1){
             $message = 'Sorry, no package information could be found.';
         }
-        include '../view/vehicle-delete.php';
+        include '../view/delete-package.php';
         exit;
     break;
 
