@@ -1,4 +1,4 @@
-    <?php $currentPage = 'Home'; ?>'
+    <?php $currentPage = 'Home'; ?>
     <?php require '../hannahmacphoto/commonH/head.php'; ?>
 
     <body>
