@@ -19,6 +19,7 @@
 
     $packageName = $package_rows[0]['packagename'];
     $packageDescription = $package_rows[0]['packagedescription'];
+    $packageID = $$package_rows[0]['packageid'];
     
     ?>
     <?php require '../commonH/head.php'; ?>
@@ -49,8 +50,8 @@
                 <input type="submit" name="submit" id="deletePackageebtn" value="Delete Package">
                 <input type="hidden" name="action" value="deletePackage">
                 <input type="number" name="packageid" value="
-                <?php if(isset($package_id)){
-                    echo $package_id;}
+                <?php if(isset($packageID)){
+                    echo $packageID;}
                 ?>">
             </form>  
 
