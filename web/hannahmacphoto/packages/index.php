@@ -74,8 +74,8 @@ switch ($action) {
         $packageID = filter_input(INPUT_POST, 'packageid', FILTER_SANITIZE_NUMBER_INT);
 
         if(empty($mediaID) || empty($packageName) || empty($packagePrice) || empty($packageHours) || empty($packageImg) || empty($packageLocationCount) || empty($packageDescription)){
-            $message = "<p class='notice'>Please provide information for all empty form fields.</p>";
-            include '../view/update-package.php';
+            $message = "<p>Please provide information for all empty form fields.</p>";
+            include '../view/update-package&package_id=.urlencode($packageID)';
             exit; 
         }
 
