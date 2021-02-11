@@ -23,7 +23,6 @@
     $packageHours = $package_rows[0]['packagehours'];
     $packageLocationCount = $package_rows[0]['packagelocationcount'];
     $packageDescription = $package_rows[0]['packagedescription'];
-    $packageID
 ?>
     <?php require '../commonH/head.php'; ?>
 
