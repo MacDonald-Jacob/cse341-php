@@ -24,18 +24,18 @@
                 <label class="required" for="packagename">Package Name:</label><br>
                 <input type="text" id="packagename" name="packagename" size="26" readonly
                 <?php 
-                if(isset($packageName)){
-                    echo "value='$packageName'";
+                if(isset($packageInfo['packagename'])){
+                    echo "value='$packageInfo[packagename]'";
                 }  
                 ?>><br> 
                 <label class="required" for="packagedescription">Description:</label><br>
                 <textarea id="packagedescription" name="packagedescription" rows="5" cols="26" form="deletePackageForm" readonly><?php
-                if(isset($packageDescription)){
-                     echo htmlentities($packageDescription, ENT_QUOTES);
+                if(isset($packageInfo['packagedescription'])){
+                     echo htmlentities($packageInfo['packagedescription'], ENT_QUOTES);
                 }?></textarea><br><br>
                 <input type="submit" name="submit" id="deletePackageebtn" value="Delete Package">
                 <input type="hidden" name="action" value="deletePackage">
-                <input type="hidden" name="packageid" value="
+                <input type="number" name="packageid" value="
                 <?php if(isset($packageInfo['packageid'])){
                     echo $packageInfo['packageid'];}
                 ?>">
